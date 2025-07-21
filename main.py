@@ -17,6 +17,9 @@ st.set_page_config(
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
+# --- ADD THIS LINE FOR DEBUGGING ---
+st.write(f"Loaded API Key starts with: {GOOGLE_API_KEY[:5]}") 
+
 # Set up Google Gemini-Pro AI model
 gen_ai.configure(api_key=GOOGLE_API_KEY)
 model = gen_ai.GenerativeModel('gemini-pro')
